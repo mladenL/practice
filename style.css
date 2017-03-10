@@ -1,0 +1,62 @@
+html {
+	font-family: arial, verdana, sans-serif;
+}
+
+#container_1 {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.title {
+	border: solid blue 2px;
+	padding: 1em;
+	flex: 1;
+}
+
+.members {
+	border: solid red 2px;
+	background-color: rgba(255, 0, 0, 0.2);
+	padding: 1em;
+}
+
+#container_2 {
+	border: solid grey 2px;
+	display: flex;
+	height: 430px;
+
+}
+
+.side_menu {
+	border: solid purple 2px;
+	padding: 1em;
+}
+
+.main_content {
+	border: solid grey 2px;
+	padding: 1em;
+	flex: 1;
+}
+
+.connexion_button {
+background-color: red;
+color: white;
+border: none;
+}
+
+.subscription_button {
+background-color: red;
+color: white;
+border: none;
+}
+
+.connexion_button:hover {
+background-color: white;
+color: red;
+border: none;
+}
+
+.subscription_button:hover {
+background-color: white;
+color: red;
+border: none;
+}
