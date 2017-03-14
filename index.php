@@ -11,7 +11,7 @@ error_reporting(0);
 <head>
 	<title>Mon Chat privé avec Espace membres</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <!--En-tête du site avec titre et encart de connexion membres-->

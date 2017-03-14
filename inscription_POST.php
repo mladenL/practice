@@ -1,5 +1,6 @@
 <?php 
 session_start();
+error_reporting(0);
 
 $_SESSION['user_name_error'] = 0;
 $_SESSION['password_error'] = 0;
@@ -103,12 +104,21 @@ switch ($_POST['password_confirm']) {
 		'passwd' => $_POST['password'],
 		'user_permission' => 2
 		 ));
+
+	$req = $bdd->prepare('SELECT * FROM users WHERE user_name = :name');
+	$req->execute(array(
+		'name' => $_POST['user_name']
+		));
+	$data = $req->fetch();
+	$_SESSION['user_id'] = $data['user_id'];
 		
-	//header('Location: inscription_OK.php');
 	echo 'Inscription réussie';
-	echo '<br/><a href="index.php"><input type="submit" value="<---Commencer à Chater" class="subscription_button"></a>';
-	include('inscription.php');
 	$_SESSION['user_name'] = $_POST['user_name'];
+	echo '<br/><a href="index.php"><input type="submit" value="<---Commencer à Chater" class="subscription_button"></a>';
+//	$query = $bdd->prepare('SELECT user_id FROM users WHERE user_name = :name');
+//	$query->execute(array('name' => $_SESSION['user_name']));
+//	$_SESSION['user_id'] = print_r($query);
+	header('Location: inscription.php');
 }
 
 else {

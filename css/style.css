@@ -22,7 +22,7 @@ html {
 #container_2 {
 	border: solid grey 2px;
 	display: flex;
-	height: 430px;
+	height: 420px;
 
 }
 
@@ -35,6 +35,7 @@ html {
 	border: solid grey 2px;
 	padding: 1em;
 	flex: 1;
+	overflow: scroll;
 }
 
 .connexion_button {
